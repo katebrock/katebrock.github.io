@@ -1,43 +1,56 @@
 @import "../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
 @import "../bower_components/neat/app/assets/stylesheets/_neat.scss";
-$visual-grid: true;
+$visual-grid:true;
 @import "variables";
 
 
 
 
 
-// main{
-//   @include outer-container;
-//
-// }
+main{
+  @include outer-container;
+
+}
 
 
 /////////////////////////////////////
 //          Header                //
 ////////////////////////////////////
 
-
 .hero{
-  @include outer-container;
-  img{
-    @include span-columns(12 of 12);
-    background: url(../assets/graph.jpg);
-    background-size: 100%;
-    background-color: #f2f2f2;
-    // position: fixed;
-    height: 400px;
-    background-repeat: no-repeat;
-    top: 0;
-    left: 0;
- span{
-   @include span-columns(12 of 12);
-   font-size: 20px;
-   color: #ffffff;
-   position: absolute;
- }
- }
+  @include span-columns(12 of 12);
+  background-color: rgba(159, 159, 159, 0.19);
+  height: 100px;
+    span{
+      @include shift(5 of 12);
+      font-family: $heading;
+      font-size: 24px;
+      line-height: 86px;
+    }
 }
+
+
+
+// .hero{
+//   @include outer-container;
+//   img{
+//     @include span-columns(12 of 12);
+//     background: url(../assets/graph.jpg);
+//     background-size: 100%;
+//     background-color: #f2f2f2;
+//     // position: fixed;
+//     height: 400px;
+//     background-repeat: no-repeat;
+//     top: 0;
+//     left: 0;
+//  span{
+//    @include span-columns(12 of 12);
+//    font-size: 20px;
+//    color: #ffffff;
+//    position: absolute;
+//  }
+//  }
+// }
 
 ///////////////////////////////////////
 //            Headshot              //
@@ -45,17 +58,18 @@ $visual-grid: true;
 
 
 .headshot{
-  @include outer-container;
-  @include span-columns(6 of 12);
+  @include span-columns(6);
+  margin-top: 20px;
   img{
     @include span-columns(2 of 6);
+    @include shift(2 of 6);
     max-width: 100%;
-
   }
   img:hover{
     opacity: 0.4;
     filter: alpha(opacity=40);
   }
+
 
 }
 
@@ -85,11 +99,16 @@ h1{
 
 .skills{
   @include span-columns(12 of 12);
+  margin-top: 20px;
   li{
-    @include span-columns(3 of 12);
+    @include span-columns(3.8 of 12);
     font-family: $body;
     line-height: 20px;
-
+    text-align: center;
+    &:hover{
+      color: red;
+      font-weight: bold;
+    }
   }
 }
 
@@ -99,6 +118,7 @@ h1{
 
 .portfolio{
   @include span-columns(12 of 12);
+  margin-top: 20px;
   a{
     text-decoration: none;
   }
@@ -111,6 +131,7 @@ h1{
 
 .links{
   @include span-columns(12 of 12);
+  margin-top: 20px;
   a{
     text-decoration: none;
   }

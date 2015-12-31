@@ -6,51 +6,36 @@ html {
 *::before {
   box-sizing: inherit; }
 
-.hero {
+main {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
-  .hero::after {
+  main::after {
     clear: both;
     content: "";
     display: table; }
-  .hero img {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    background: url(../assets/graph.jpg);
-    background-size: 100%;
-    background-color: #f2f2f2;
-    height: 400px;
-    background-repeat: no-repeat;
-    top: 0;
-    left: 0; }
-    .hero img:last-child {
-      margin-right: 0; }
-    .hero img span {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 100%;
-      font-size: 20px;
-      color: #ffffff;
-      position: absolute; }
-      .hero img span:last-child {
-        margin-right: 0; }
 
-.headshot {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto;
+.hero {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 48.82117%; }
-  .headshot::after {
-    clear: both;
-    content: "";
-    display: table; }
+  width: 100%;
+  background-color: rgba(159, 159, 159, 0.19);
+  height: 100px; }
+  .hero:last-child {
+    margin-right: 0; }
+  .hero span {
+    margin-left: 42.64902%;
+    font-family: "Cardo", serif;
+    font-size: 24px;
+    line-height: 86px; }
+
+.headshot {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-top: 20px; }
   .headshot:last-child {
     margin-right: 0; }
   .headshot img {
@@ -58,6 +43,7 @@ html {
     display: block;
     margin-right: 4.82916%;
     width: 30.11389%;
+    margin-left: 34.94305%;
     max-width: 100%; }
     .headshot img:last-child {
       margin-right: 0; }
@@ -85,24 +71,30 @@ h1 {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%; }
+  width: 100%;
+  margin-top: 20px; }
   .skills:last-child {
     margin-right: 0; }
   .skills li {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 23.23176%;
+    width: 30.0556%;
     font-family: "Josefin Sans", sans-serif;
-    line-height: 20px; }
+    line-height: 20px;
+    text-align: center; }
     .skills li:last-child {
       margin-right: 0; }
+    .skills li:hover {
+      color: red;
+      font-weight: bold; }
 
 .portfolio {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%; }
+  width: 100%;
+  margin-top: 20px; }
   .portfolio:last-child {
     margin-right: 0; }
   .portfolio a {
@@ -112,7 +104,8 @@ h1 {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%; }
+  width: 100%;
+  margin-top: 20px; }
   .links:last-child {
     margin-right: 0; }
   .links a {
