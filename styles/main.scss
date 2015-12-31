@@ -1,0 +1,126 @@
+@import "../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "../bower_components/neat/app/assets/stylesheets/_neat.scss";
+$visual-grid: true;
+@import "variables";
+
+
+
+
+
+// main{
+//   @include outer-container;
+//
+// }
+
+
+/////////////////////////////////////
+//          Header                //
+////////////////////////////////////
+
+
+.hero{
+  @include outer-container;
+  img{
+    @include span-columns(12 of 12);
+    background: url(../assets/graph.jpg);
+    background-size: 100%;
+    background-color: #f2f2f2;
+    // position: fixed;
+    height: 400px;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+ span{
+   @include span-columns(12 of 12);
+   font-size: 20px;
+   color: #ffffff;
+   position: absolute;
+ }
+ }
+}
+
+///////////////////////////////////////
+//            Headshot              //
+//////////////////////////////////////
+
+
+.headshot{
+  @include outer-container;
+  @include span-columns(6 of 12);
+  img{
+    @include span-columns(2 of 6);
+    max-width: 100%;
+
+  }
+  img:hover{
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+  }
+
+}
+
+
+//////////////////////////////////////
+//             About               //
+////////////////////////////////////
+
+.about{
+  @include span-columns(5.5 of 12);
+    font-family: $body;
+    line-height: 25px;
+      span{
+        font-family: $body;
+      }
+    }
+h1{
+  font-family: $heading;
+  text-align: center;
+}
+
+
+
+///////////////////////////////////////
+//            Skills                //
+/////////////////////////////////////
+
+.skills{
+  @include span-columns(12 of 12);
+  li{
+    @include span-columns(3 of 12);
+    font-family: $body;
+    line-height: 20px;
+
+  }
+}
+
+////////////////////////////////////
+//             Portfolio         //
+//////////////////////////////////
+
+.portfolio{
+  @include span-columns(12 of 12);
+  a{
+    text-decoration: none;
+  }
+}
+
+
+///////////////////////////////////
+//            Links             //
+/////////////////////////////////
+
+.links{
+  @include span-columns(12 of 12);
+  a{
+    text-decoration: none;
+  }
+}
+
+
+
+
+
+h2{
+  color: pink;
+  font-size: 50px;
+}

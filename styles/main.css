@@ -1,0 +1,123 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+.hero {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .hero::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .hero img {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    background: url(../assets/graph.jpg);
+    background-size: 100%;
+    background-color: #f2f2f2;
+    height: 400px;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0; }
+    .hero img:last-child {
+      margin-right: 0; }
+    .hero img span {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      font-size: 20px;
+      color: #ffffff;
+      position: absolute; }
+      .hero img span:last-child {
+        margin-right: 0; }
+
+.headshot {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  .headshot::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .headshot:last-child {
+    margin-right: 0; }
+  .headshot img {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 30.11389%;
+    max-width: 100%; }
+    .headshot img:last-child {
+      margin-right: 0; }
+  .headshot img:hover {
+    opacity: 0.4;
+    filter: alpha(opacity=40); }
+
+.about {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 44.55627%;
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 25px; }
+  .about:last-child {
+    margin-right: 0; }
+  .about span {
+    font-family: "Josefin Sans", sans-serif; }
+
+h1 {
+  font-family: "Cardo", serif;
+  text-align: center; }
+
+.skills {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .skills:last-child {
+    margin-right: 0; }
+  .skills li {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    font-family: "Josefin Sans", sans-serif;
+    line-height: 20px; }
+    .skills li:last-child {
+      margin-right: 0; }
+
+.portfolio {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .portfolio:last-child {
+    margin-right: 0; }
+  .portfolio a {
+    text-decoration: none; }
+
+.links {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .links:last-child {
+    margin-right: 0; }
+  .links a {
+    text-decoration: none; }
+
+h2 {
+  color: pink;
+  font-size: 50px; }
