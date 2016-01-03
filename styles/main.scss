@@ -21,6 +21,7 @@ main{
   @include span-columns(12 of 12);
   background-color: rgba(159, 159, 159, 0.19);
   height: 100px;
+  // position: fixed;
     span{
       @include shift(5 of 12);
       font-family: $heading;
@@ -82,15 +83,22 @@ main{
   @include span-columns(5.5 of 12);
     font-family: $body;
     line-height: 25px;
+    text-decoration: none;
       span{
         font-family: $body;
-      }
-    }
+        text-decoration: none;
+        a{
+          text-decoration: none;
+        }
+          }
+        }
 h1{
   font-family: $heading;
   text-align: center;
 }
-
+.highlight{
+  color: #FF6002;
+}
 
 
 ///////////////////////////////////////
@@ -103,10 +111,10 @@ h1{
   li{
     @include span-columns(3.8 of 12);
     font-family: $body;
-    line-height: 20px;
+    line-height: 25px;
     text-align: center;
     &:hover{
-      color: red;
+      color: #FF6002;
       font-weight: bold;
     }
   }
@@ -121,10 +129,13 @@ h1{
   margin-top: 20px;
   a{
     text-decoration: none;
+    color: #000000;
   }
 }
 
-
+.portfolioLinks{
+  list-style-type: none;
+}
 ///////////////////////////////////
 //            Links             //
 /////////////////////////////////
@@ -134,14 +145,20 @@ h1{
   margin-top: 20px;
   a{
     text-decoration: none;
+    color: #000000;
   }
 }
 
 
+.nav{
+  @include span-columns(5 of 12);
+  list-style-type: none;
+  background-color: #EDEDED;
+  border: 1px solid rgba(103,105,94,0.32);
+  height: 100px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-top:40px;
+  font-family: $body;
 
-
-
-h2{
-  color: pink;
-  font-size: 50px;
 }

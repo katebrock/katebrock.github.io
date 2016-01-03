@@ -57,15 +57,22 @@ main {
   margin-right: 2.35765%;
   width: 44.55627%;
   font-family: "Josefin Sans", sans-serif;
-  line-height: 25px; }
+  line-height: 25px;
+  text-decoration: none; }
   .about:last-child {
     margin-right: 0; }
   .about span {
-    font-family: "Josefin Sans", sans-serif; }
+    font-family: "Josefin Sans", sans-serif;
+    text-decoration: none; }
+    .about span a {
+      text-decoration: none; }
 
 h1 {
   font-family: "Cardo", serif;
   text-align: center; }
+
+.highlight {
+  color: #FF6002; }
 
 .skills {
   float: left;
@@ -81,12 +88,12 @@ h1 {
     margin-right: 2.35765%;
     width: 30.0556%;
     font-family: "Josefin Sans", sans-serif;
-    line-height: 20px;
+    line-height: 25px;
     text-align: center; }
     .skills li:last-child {
       margin-right: 0; }
     .skills li:hover {
-      color: red;
+      color: #FF6002;
       font-weight: bold; }
 
 .portfolio {
@@ -98,7 +105,11 @@ h1 {
   .portfolio:last-child {
     margin-right: 0; }
   .portfolio a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #000000; }
+
+.portfolioLinks {
+  list-style-type: none; }
 
 .links {
   float: left;
@@ -109,8 +120,21 @@ h1 {
   .links:last-child {
     margin-right: 0; }
   .links a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #000000; }
 
-h2 {
-  color: pink;
-  font-size: 50px; }
+.nav {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 40.29137%;
+  list-style-type: none;
+  background-color: #EDEDED;
+  border: 1px solid rgba(103, 105, 94, 0.32);
+  height: 100px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-top: 40px;
+  font-family: "Josefin Sans", sans-serif; }
+  .nav:last-child {
+    margin-right: 0; }
