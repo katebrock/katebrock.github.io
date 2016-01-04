@@ -8,7 +8,7 @@ $visual-grid:true;
 
 
 main{
-  @include outer-container;
+  @include outer-container(100%);
 
 }
 
@@ -17,41 +17,40 @@ main{
 //          Header                //
 ////////////////////////////////////
 
-.hero{
-  @include span-columns(12 of 12);
-  background-color: rgba(159, 159, 159, 0.19);
-  height: 100px;
-  // position: fixed;
-    span{
-      @include shift(5 of 12);
-      font-family: $heading;
-      font-size: 24px;
-      line-height: 86px;
-    }
-}
-
-
-
 // .hero{
-//   @include outer-container;
-//   img{
-//     @include span-columns(12 of 12);
-//     background: url(../assets/graph.jpg);
-//     background-size: 100%;
-//     background-color: #f2f2f2;
-//     // position: fixed;
-//     height: 400px;
-//     background-repeat: no-repeat;
-//     top: 0;
-//     left: 0;
-//  span{
-//    @include span-columns(12 of 12);
-//    font-size: 20px;
-//    color: #ffffff;
-//    position: absolute;
-//  }
-//  }
+//   @include span-columns(12 of 12);
+//   background-color: rgba(159, 159, 159, 0.19);
+//   height: 100px;
+//   // position: fixed;
+//     span{
+//       @include shift(5 of 12);
+//       font-family: $heading;
+//       font-size: 24px;
+//       line-height: 86px;
+//     }
 // }
+
+
+
+.hero{
+  @include span-columns(12);
+  height: 400px;
+  background: url(../assets/graph.jpg) no-repeat;
+  background-size: 100%;
+  background-position: 0px -32px;
+  position:fixed;
+  top:0px;
+  margin:auto;
+  z-index:100000;
+
+ span{
+   @include span-columns(12 of 12);
+   font-size: 20px;
+   color: #ffffff;
+  //  position: absolute;
+ }
+
+}
 
 ///////////////////////////////////////
 //            Headshot              //
