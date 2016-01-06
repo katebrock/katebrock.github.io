@@ -7,10 +7,175 @@ $visual-grid:true;
 
 
 
+
 main{
   @include outer-container(100%);
 
 }
+
+
+//////////////////////////////////////
+//          Global                 //
+////////////////////////////////////
+
+h1{
+  @include span-columns(12 of 12);
+  font-family: $heading;
+  text-align: center;
+}
+
+//////////////////////////////////////
+//            Header               //
+////////////////////////////////////
+// .headerMain{
+//   @include outer-container;
+//
+//   .hero{
+//     @include span-columns(12);
+//     height: 400px;
+//     // background: url(../assets/graph.jpg) no-repeat;
+//     background-size: 100%;
+//     background-position: 0px -32px;
+//     position:fixed;
+//     top:0px;
+//     margin:auto;
+//     z-index:100000;
+//
+//    span{
+//      @include span-columns(12 of 12);
+//      font-size: 30px;
+//      color: #ffffff;
+//      text-align: center;
+//      padding-top: 150px;
+//      font-family: $heading;
+//      font-weight: lighter;
+//     //  position: fixed;
+//    }
+//   }
+// }
+
+//////////////////////////////////////
+//             About               //
+////////////////////////////////////
+
+.about{
+  @include outer-container;
+}
+  .aboutMe{
+    @include span-columns(6);
+    font-family: $body;
+    line-height: 34px;
+    margin-left: 20px;
+    span{
+      font-family: $body;
+      text-decoration: none;
+      a{
+        text-decoration: none;
+      }
+        }
+      }
+
+  .highlight{
+    color: #FF6002;
+  }
+  .headshot{
+    @include span-columns(2 of 12);
+    @include shift(2);
+    .headshot:hover{
+        opacity: 0.4;
+        filter: alpha(opacity=40);
+      }
+  }
+
+
+
+///////////////////////////////////////
+//            Skills                //
+/////////////////////////////////////
+
+.skillsSection{
+  @include outer-container;
+}
+.skills li{
+  @include span-columns(4);
+  font-family: $body;
+  line-height: 25px;
+  text-align: center;
+  &:hover{
+    color: #FF6002;
+    font-weight: bold;
+  }
+}
+.skills li:nth-child(3n) {
+  @include omega();
+}
+
+
+////////////////////////////////////
+//             Portfolio         //
+//////////////////////////////////
+.portfolioSection{
+  @include outer-container;
+}
+.portfolio li{
+  @include span-columns(4);
+  font-family: $body;
+  line-height: 25px;
+  text-align: center;
+  &:hover{
+    color: #FF6002;
+    font-weight: bold;
+  }
+}
+.portfolio li:nth-child(3n){
+  @include omega();
+}
+///////////////////////////////////
+//            Links             //
+/////////////////////////////////
+.social{
+  @include outer-container;
+}
+.links{
+  @include span-columns(10 of 12);
+  @include shift(1.5);
+  a{
+    text-decoration: none;
+    color: #000000;
+  }
+
+.navLinks li{
+  @include span-columns(5);
+  list-style-type: none;
+  background-color: #EDEDED;
+  border: 1px solid rgba(103,105,94,0.32);
+  height: 100px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-top:40px;
+  font-family: $body;
+  cursor: pointer;
+  -webkit-transition: background-color .7s ease-out;
+  -moz-transition: background-color .7s ease-out;
+  -o-transition: background-color .7s ease-out;
+  transition: background-color .7s ease-out;
+  &:hover{
+    cursor: pointer;
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out;
+    color: white;
+    background-color: #FF7C2F;
+    border: 2px solid gray;
+    }
+}
+}
+//////////////////////////////////////
+/////////////////////////////////////
+//////////////old////////////////////
+////////////////////////////////////
+/////////////////////////////////////
 
 
 /////////////////////////////////////
@@ -32,132 +197,93 @@ main{
 
 
 
-.hero{
-  @include span-columns(12);
-  height: 400px;
-  background: url(../assets/graph.jpg) no-repeat;
-  background-size: 100%;
-  background-position: 0px -32px;
-  position:fixed;
-  top:0px;
-  margin:auto;
-  z-index:100000;
-
- span{
-   @include span-columns(12 of 12);
-   font-size: 20px;
-   color: #ffffff;
-  //  position: absolute;
- }
-
-}
-
 ///////////////////////////////////////
 //            Headshot              //
 //////////////////////////////////////
 
 
-.headshot{
-  @include span-columns(6);
-  margin-top: 20px;
-  img{
-    @include span-columns(2 of 6);
-    @include shift(2 of 6);
-    max-width: 100%;
-  }
-  img:hover{
-    opacity: 0.4;
-    filter: alpha(opacity=40);
-  }
+// .headshot{
+//   @include span-columns(6);
+//   margin-top: 20px;
+//   img{
+//     @include span-columns(2 of 6);
+//     @include shift(2 of 6);
+//     max-width: 100%;
+//   }
+//   img:hover{
+//     opacity: 0.4;
+//     filter: alpha(opacity=40);
+//   }
+//
+//
+// }
+//
+//
+// //////////////////////////////////////
+// //             About               //
+// ////////////////////////////////////
+//
+// .aboutme{
+//   @include span-columns(5.5 of 12);
+//     font-family: $body;
+//     line-height: 25px;
+//     text-decoration: none;
+//       span{
+//         font-family: $body;
+//         text-decoration: none;
+//         a{
+//           text-decoration: none;
+//         }
+//           }
+//         }
+// h1{
+//   font-family: $heading;
+//   text-align: center;
+// }
+// .highlight{
+//   color: #FF6002;
+// }
+//
+//
 
-
-}
-
-
-//////////////////////////////////////
-//             About               //
-////////////////////////////////////
-
-.about{
-  @include span-columns(5.5 of 12);
-    font-family: $body;
-    line-height: 25px;
-    text-decoration: none;
-      span{
-        font-family: $body;
-        text-decoration: none;
-        a{
-          text-decoration: none;
-        }
-          }
-        }
-h1{
-  font-family: $heading;
-  text-align: center;
-}
-.highlight{
-  color: #FF6002;
-}
-
-
-///////////////////////////////////////
-//            Skills                //
-/////////////////////////////////////
-
-.skills{
-  @include span-columns(12 of 12);
-  margin-top: 20px;
-  li{
-    @include span-columns(3.8 of 12);
-    font-family: $body;
-    line-height: 25px;
-    text-align: center;
-    &:hover{
-      color: #FF6002;
-      font-weight: bold;
-    }
-  }
-}
-
-////////////////////////////////////
-//             Portfolio         //
-//////////////////////////////////
-
-.portfolio{
-  @include span-columns(12 of 12);
-  margin-top: 20px;
-  a{
-    text-decoration: none;
-    color: #000000;
-  }
-}
-
-.portfolioLinks{
-  list-style-type: none;
-}
-///////////////////////////////////
-//            Links             //
-/////////////////////////////////
-
-.links{
-  @include span-columns(12 of 12);
-  margin-top: 20px;
-  a{
-    text-decoration: none;
-    color: #000000;
-  }
-}
-
-
-.nav{
-  @include span-columns(5 of 12);
-  list-style-type: none;
-  background-color: #EDEDED;
-  border: 1px solid rgba(103,105,94,0.32);
-  height: 100px;
-  margin-bottom: 20px;
-  text-align: center;
-  padding-top:40px;
-  font-family: $body;
-
-}
+// ///////////////////////////////////
+// //            Links             //
+// /////////////////////////////////
+//
+// .links{
+//   @include span-columns(12 of 12);
+//   margin-top: 20px;
+//   a{
+//     text-decoration: none;
+//     color: #000000;
+// }
+//
+//
+// .nav{
+//   @include span-columns(5 of 12);
+//   list-style-type: none;
+//   background-color: #EDEDED;
+//   border: 1px solid rgba(103,105,94,0.32);
+//   height: 100px;
+//   margin-bottom: 20px;
+//   text-align: center;
+//   padding-top:40px;
+//   font-family: $body;
+//   cursor: pointer;
+//   -webkit-transition: background-color .7s ease-out;
+//   -moz-transition: background-color .7s ease-out;
+//   -o-transition: background-color .7s ease-out;
+//   transition: background-color .7s ease-out;
+//   &:hover{
+//     cursor: pointer;
+//     -webkit-transition: background-color 2s ease-out;
+//     -moz-transition: background-color 2s ease-out;
+//     -o-transition: background-color 2s ease-out;
+//     transition: background-color 2s ease-out;
+//     color: white;
+//     background-color: #FF7C2F;
+//     border: 2px solid gray;
+//     }
+// }
+//
+// }
