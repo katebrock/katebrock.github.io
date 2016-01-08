@@ -6,13 +6,9 @@ $visual-grid:true;
 
 
 
-
-
-main{
-  @include outer-container(100%);
-
+body{
+  margin: 0;
 }
-
 
 //////////////////////////////////////
 //          Global                 //
@@ -27,39 +23,47 @@ h1{
 //////////////////////////////////////
 //            Header               //
 ////////////////////////////////////
-// .headerMain{
-//   @include outer-container;
-//
-//   .hero{
-//     @include span-columns(12);
-//     height: 400px;
-//     // background: url(../assets/graph.jpg) no-repeat;
-//     background-size: 100%;
-//     background-position: 0px -32px;
-//     position:fixed;
-//     top:0px;
-//     margin:auto;
-//     z-index:100000;
-//
-//    span{
-//      @include span-columns(12 of 12);
-//      font-size: 30px;
-//      color: #ffffff;
-//      text-align: center;
-//      padding-top: 150px;
-//      font-family: $heading;
-//      font-weight: lighter;
-//     //  position: fixed;
-//    }
-//   }
-// }
+.headerMain{
+  @include outer-container(100%);
+
+header{
+  @include span-columns(12);
+  height: 100px;
+}
+header a{
+  color: black;
+}
+
+
+  .hero{
+    @include span-columns(12);
+    height: 400px;
+    background: url(../assets/graph.jpg) no-repeat;
+    background-size: 100%;
+    background-position: 0px -32px;
+    top:0px;
+    margin:auto;
+    z-index:100000;
+
+   span{
+     @include span-columns(12 of 12);
+     font-size: 30px;
+     color: #ffffff;
+     text-align: center;
+     padding-top: 150px;
+     font-family: $heading;
+     font-weight: lighter;
+    //  position: fixed;
+   }
+  }
+}
 
 //////////////////////////////////////
 //             About               //
 ////////////////////////////////////
 
 .about{
-  @include outer-container;
+  @include outer-container();
 }
   .aboutMe{
     @include span-columns(6);
@@ -144,7 +148,7 @@ h1{
     color: #000000;
   }
 
-.navLinks li{
+.navLinks a{
   @include span-columns(5);
   list-style-type: none;
   background-color: #EDEDED;
