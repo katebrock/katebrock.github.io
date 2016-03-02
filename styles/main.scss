@@ -6,7 +6,9 @@ $visual-grid:true;
 
 
 
-body{
+html, body, div.headerMain{
+  height: 100%;
+  overflow: scroll;
   margin: 0;
 }
 
@@ -23,40 +25,69 @@ h1{
 //////////////////////////////////////
 //            Header               //
 ////////////////////////////////////
+
 .headerMain{
   @include outer-container(100%);
+}
 
-header{
+.socialLinks{
   @include span-columns(12);
-  height: 100px;
-}
-header a{
-  color: black;
+  height: 50px;
+  background: transparent;
+  position: fixed;
+  width: 100%;
 }
 
-
-  .hero{
-    @include span-columns(12);
-    height: 400px;
-    background: url(../assets/graph.jpg) no-repeat;
-    background-size: 100%;
-    background-position: 0px -32px;
-    top:0px;
-    margin:auto;
-    z-index:100000;
-
-   span{
-     @include span-columns(12 of 12);
-     font-size: 30px;
-     color: #ffffff;
-     text-align: center;
-     padding-top: 150px;
-     font-family: $heading;
-     font-weight: lighter;
-    //  position: fixed;
-   }
-  }
+.main{
+  height: 200px;
 }
+
+section.hero{
+  @include span-columns(12);
+  height: 500px;
+  background-repeat: no-repeat;
+  background: url(../assets/graph.jpg);
+  background-size: 100%;
+  background-position: 0px -32px;
+  top:0px;
+  margin:auto;
+  z-index:100000;
+}
+
+// .headerMain{
+//   @include outer-container(100%);
+//
+// header{
+//   @include span-columns(12);
+//   height: 100px;
+// }
+// header a{
+//   color: black;
+// }
+//
+//
+//   .hero{
+//     @include span-columns(12);
+//     height: 400px;
+//     background: url(../assets/graph.jpg) no-repeat;
+//     background-size: 100%;
+//     background-position: 0px -32px;
+//     top:0px;
+//     margin:auto;
+//     z-index:100000;
+//
+//    span{
+//      @include span-columns(12 of 12);
+//      font-size: 30px;
+//      color: #ffffff;
+//      text-align: center;
+//      padding-top: 150px;
+//      font-family: $heading;
+//      font-weight: lighter;
+//     //  position: fixed;
+//    }
+//   }
+// }
 
 //////////////////////////////////////
 //             About               //
