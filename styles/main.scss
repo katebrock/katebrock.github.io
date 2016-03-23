@@ -36,8 +36,13 @@ h1{
   background: transparent;
   position: fixed;
   width: 100%;
+
 }
 
+// .headLinks{
+//   float: right;
+//
+// }
 .main{
   height: 200px;
 }
@@ -116,8 +121,16 @@ section.hero{
   .headshot{
     @include span-columns(2 of 12);
     @include shift(2);
-    .headshot:hover{
+    margin-top: 28px;
+    opacity: 1;
+    -webkit-transition: opacity .2s ease-out;
+    -moz-transition: opacity .2s ease-out;
+    -o-transition: opacity .2s ease-out;
+    transition: opacity .2s ease-out;
+
+    &:hover{
         opacity: 0.4;
+        cursor: pointer;
         filter: alpha(opacity=40);
       }
   }
@@ -130,12 +143,14 @@ section.hero{
 
 .skillsSection{
   @include outer-container;
+
 }
 .skills li{
   @include span-columns(4);
   font-family: $body;
   line-height: 25px;
   text-align: center;
+  margin: 0 auto;
   &:hover{
     color: #FF6002;
     font-weight: bold;
@@ -149,18 +164,49 @@ section.hero{
 ////////////////////////////////////
 //             Portfolio         //
 //////////////////////////////////
-.portfolioSection{
+.portfolioLinks{
   @include outer-container;
 }
 .portfolio li{
   @include span-columns(4);
   font-family: $body;
+  position: relative;
   line-height: 25px;
   text-align: center;
-  &:hover{
-    color: #FF6002;
-    font-weight: bold;
+  margin: 0 auto;
+  opacity: 1;
+  // &:hover{
+  //   color: #FF6002;
+  //   font-weight: bold;
+  // }
+
+
+  &:hover {
+      cursor: pointer;
+      -webkit-transition: background-color 2s ease-out;
+      -moz-transition: background-color 2s ease-out;
+      -o-transition: background-color 2s ease-out;
+      transition: background-color 2s ease-out;
+      opacity: 0.4;
+
+    h3{
+      color: black;
+
+    }
   }
+  }
+
+h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px rgba(0,0,0,0.7);
+    margin: 0;
+}
+.portfolioGif{
+  width: 100%;
 }
 .portfolio li:nth-child(3n){
   @include omega();

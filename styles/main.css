@@ -1,17 +1,14 @@
 html {
   box-sizing: border-box; }
 
-*,
-*::after,
-*::before {
+*, *::after, *::before {
   box-sizing: inherit; }
 
 html, body, div.headerMain {
-  min-height: 100%;
+  height: 100%;
+  overflow: scroll;
   margin: 0; }
-#test {
-  text-decoration: none;
-}
+
 h1 {
   float: left;
   display: block;
@@ -95,11 +92,18 @@ section.hero {
   display: block;
   margin-right: 2.35765%;
   width: 14.70196%;
-  margin-left: 17.05961%; }
+  margin-left: 17.05961%;
+  margin-top: 28px;
+  opacity: 1;
+  -webkit-transition: opacity .2s ease-out;
+  -moz-transition: opacity .2s ease-out;
+  -o-transition: opacity .2s ease-out;
+  transition: opacity .2s ease-out; }
   .headshot:last-child {
     margin-right: 0; }
-  .headshot .headshot:hover {
+  .headshot:hover {
     opacity: 0.4;
+    cursor: pointer;
     filter: alpha(opacity=40); }
 
 .skillsSection {
@@ -118,7 +122,8 @@ section.hero {
   width: 31.76157%;
   font-family: "Josefin Sans", sans-serif;
   line-height: 25px;
-  text-align: center; }
+  text-align: center;
+  margin: 0 auto; }
   .skills li:last-child {
     margin-right: 0; }
   .skills li:hover {
@@ -128,11 +133,11 @@ section.hero {
 .skills li:nth-child(3n) {
   margin-right: 0; }
 
-.portfolioSection {
+.portfolioLinks {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
-  .portfolioSection::after {
+  .portfolioLinks::after {
     clear: both;
     content: "";
     display: table; }
@@ -143,13 +148,34 @@ section.hero {
   margin-right: 2.35765%;
   width: 31.76157%;
   font-family: "Josefin Sans", sans-serif;
+  position: relative;
   line-height: 25px;
-  text-align: center; }
+  text-align: center;
+  margin: 0 auto;
+  opacity: 1; }
   .portfolio li:last-child {
     margin-right: 0; }
   .portfolio li:hover {
-    color: #FF6002;
-    font-weight: bold; }
+    cursor: pointer;
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out;
+    opacity: 0.4; }
+    .portfolio li:hover h3 {
+      color: black; }
+
+h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.7);
+  margin: 0; }
+
+.portfolioGif {
+  width: 100%; }
 
 .portfolio li:nth-child(3n) {
   margin-right: 0; }
@@ -188,10 +214,10 @@ section.hero {
     padding-top: 40px;
     font-family: "Josefin Sans", sans-serif;
     cursor: pointer;
-    -webkit-transition: background-color 0.7s ease-out;
-    -moz-transition: background-color 0.7s ease-out;
-    -o-transition: background-color 0.7s ease-out;
-    transition: background-color 0.7s ease-out; }
+    -webkit-transition: background-color .7s ease-out;
+    -moz-transition: background-color .7s ease-out;
+    -o-transition: background-color .7s ease-out;
+    transition: background-color .7s ease-out; }
     .links .navLinks a:last-child {
       margin-right: 0; }
     .links .navLinks a:hover {
