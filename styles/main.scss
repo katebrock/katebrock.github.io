@@ -1,12 +1,10 @@
 @import "../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
 @import "../bower_components/neat/app/assets/stylesheets/_neat.scss";
-$visual-grid:true;
+$visual-grid: true;
 @import "variables";
-
-
-
-
-html, body, div.headerMain{
+html,
+body,
+div.headerMain {
   height: 100%;
   overflow: scroll;
   margin: 0;
@@ -15,8 +13,7 @@ html, body, div.headerMain{
 //////////////////////////////////////
 //          Global                 //
 ////////////////////////////////////
-
-h1{
+h1 {
   @include span-columns(12 of 12);
   font-family: $heading;
   text-align: center;
@@ -25,39 +22,43 @@ h1{
 //////////////////////////////////////
 //            Header               //
 ////////////////////////////////////
-
-.headerMain{
+.headerMain {
   @include outer-container(100%);
 }
-
-.socialLinks{
+.socialLinks {
   @include span-columns(12);
   height: 50px;
   background: transparent;
   position: fixed;
   width: 100%;
-
+  a{
+    color: white;
+    text-decoration: none;
+    float: right;
+    padding-right: 40px;
+    margin-top: 20px;
+    font-family: $heading;
+  }
 }
-
-// .headLinks{
-//   float: right;
-//
-// }
-.main{
+.main {
   height: 200px;
 }
-
-section.hero{
+section.hero {
   @include span-columns(12);
   height: 500px;
   background-repeat: no-repeat;
   background: url(../assets/graph.jpg);
   background-size: 100%;
-  background-position: 0px -32px;
-  top:0px;
-  margin:auto;
-  z-index:100000;
+  background-position: 0 -32px;
+  top: 0;
+  // position: fixed;
+  margin: auto;
+  z-index: 100000;
 }
+// h4{
+//   position: absolute;
+//   color: white;
+// }
 
 // .headerMain{
 //   @include outer-container(100%);
@@ -93,65 +94,57 @@ section.hero{
 //    }
 //   }
 // }
-
 //////////////////////////////////////
 //             About               //
 ////////////////////////////////////
-
-.about{
+.about {
   @include outer-container();
 }
-  .aboutMe{
-    @include span-columns(6);
+.aboutMe {
+  @include span-columns(6);
+  font-family: $body;
+  line-height: 34px;
+  margin-left: 20px;
+  span {
     font-family: $body;
-    line-height: 34px;
-    margin-left: 20px;
-    span{
-      font-family: $body;
+    text-decoration: none;
+    a {
       text-decoration: none;
-      a{
-        text-decoration: none;
-      }
-        }
-      }
-
-  .highlight{
-    color: #FF6002;
+    }
   }
-  .headshot{
-    @include span-columns(2 of 12);
-    @include shift(2);
-    margin-top: 28px;
-    opacity: 1;
-    -webkit-transition: opacity .2s ease-out;
-    -moz-transition: opacity .2s ease-out;
-    -o-transition: opacity .2s ease-out;
-    transition: opacity .2s ease-out;
-
-    &:hover{
-        opacity: 0.4;
-        cursor: pointer;
-        filter: alpha(opacity=40);
-      }
+}
+.highlight {
+  color: #FF6002;
+}
+.headshot {
+  @include span-columns(2 of 12);
+  @include shift(2);
+  margin-top: 28px;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+  &:hover {
+    opacity: 0.4;
+    cursor: pointer;
+    filter:alpha(opacity=40);
   }
-
-
+}
 
 ///////////////////////////////////////
 //            Skills                //
 /////////////////////////////////////
-
-.skillsSection{
+.skillsSection {
   @include outer-container;
-
 }
-.skills li{
+.skills li {
   @include span-columns(4);
   font-family: $body;
   line-height: 25px;
   text-align: center;
   margin: 0 auto;
-  &:hover{
+  &:hover {
     color: #FF6002;
     font-weight: bold;
   }
@@ -160,15 +153,13 @@ section.hero{
   @include omega();
 }
 
-
 ////////////////////////////////////
 //             Portfolio         //
 //////////////////////////////////
-
-.portfolioLinks{
+.portfolioLinks {
   @include outer-container;
 }
-.portfolio li{
+.portfolio li {
   @include span-columns(4);
   font-family: $body;
   position: relative;
@@ -176,105 +167,98 @@ section.hero{
   text-align: center;
   margin: 0 auto;
   opacity: 1;
-  // &:hover{
-  //   color: #FF6002;
-  //   font-weight: bold;
-  // }
-
-  a{
+  a {
     background-color: #EDEDED;
+    border: 1px solid rgba(103,105,94,0.32);
     position: relative;
     display: block;
-  }
-
-  &:hover {
+    &:hover {
       cursor: pointer;
       -webkit-transition: background-color 2s ease-out;
       -moz-transition: background-color 2s ease-out;
       -o-transition: background-color 2s ease-out;
       transition: background-color 2s ease-out;
-      opacity: 0.4;
       color: white;
       background-color: #FF7C2F;
       border: 2px solid gray;
-
-    h3{
-      color: black;
-
     }
   }
 }
-
-h3{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-shadow: 2px 2px rgba(0,0,0,0.7);
-    margin: 0;
-}
-.portfolioGif{
-  width: 100%;
-  opacity: .1;
-  border: 1px solid rgba(103,105,94,0.32);
-
-}
-.portfolio li:nth-child(3n){
-  @include omega();
-}
-///////////////////////////////////
-//            Links             //
-/////////////////////////////////
-.social{
-  @include outer-container;
-}
-.links{
-  @include span-columns(10 of 12);
-  @include shift(1.5);
-  a{
-    text-decoration: none;
-    color: #000000;
-  }
-
-.navLinks a{
-  @include span-columns(5);
-  list-style-type: none;
-  background-color: #EDEDED;
-  border: 1px solid rgba(103,105,94,0.32);
-  height: 100px;
-  margin-bottom: 20px;
-  text-align: center;
-  padding-top:40px;
-  font-family: $body;
-  cursor: pointer;
-  -webkit-transition: background-color .7s ease-out;
-  -moz-transition: background-color .7s ease-out;
-  -o-transition: background-color .7s ease-out;
-  transition: background-color .7s ease-out;
-  &:hover{
+h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  text-shadow: 2px 2px rgba(0,0,0,0.7);
+  margin: 0;
+  &:hover {
     cursor: pointer;
     -webkit-transition: background-color 2s ease-out;
     -moz-transition: background-color 2s ease-out;
     -o-transition: background-color 2s ease-out;
     transition: background-color 2s ease-out;
     color: white;
-    background-color: #FF7C2F;
-    border: 2px solid gray;
+  }
+}
+.portfolioGif {
+  width: 100%;
+  opacity: 0.1;
+  border: 1px solid rgba(103,105,94,0.32);
+}
+.portfolio li:nth-child(3n) {
+  @include omega();
+}
+
+///////////////////////////////////
+//            Links             //
+/////////////////////////////////
+.social {
+  @include outer-container;
+}
+.links {
+  @include span-columns(10 of 12);
+  @include shift(1.5);
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+  .navLinks a {
+    @include span-columns(5);
+    list-style-type: none;
+    background-color: #EDEDED;
+    border: 1px solid rgba(103,105,94,0.32);
+    height: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 40px;
+    font-family: $body;
+    cursor: pointer;
+    -webkit-transition: background-color 0.7s ease-out;
+    -moz-transition: background-color 0.7s ease-out;
+    -o-transition: background-color 0.7s ease-out;
+    transition: background-color 0.7s ease-out;
+    &:hover {
+      cursor: pointer;
+      -webkit-transition: background-color 2s ease-out;
+      -moz-transition: background-color 2s ease-out;
+      -o-transition: background-color 2s ease-out;
+      transition: background-color 2s ease-out;
+      color: white;
+      background-color: #FF7C2F;
+      border: 2px solid gray;
     }
+  }
 }
-}
+
 //////////////////////////////////////
 /////////////////////////////////////
 //////////////old////////////////////
 ////////////////////////////////////
 /////////////////////////////////////
-
-
 /////////////////////////////////////
 //          Header                //
 ////////////////////////////////////
-
 // .hero{
 //   @include span-columns(12 of 12);
 //   background-color: rgba(159, 159, 159, 0.19);
@@ -287,14 +271,9 @@ h3{
 //       line-height: 86px;
 //     }
 // }
-
-
-
 ///////////////////////////////////////
 //            Headshot              //
 //////////////////////////////////////
-
-
 // .headshot{
 //   @include span-columns(6);
 //   margin-top: 20px;
@@ -338,7 +317,6 @@ h3{
 // }
 //
 //
-
 // ///////////////////////////////////
 // //            Links             //
 // /////////////////////////////////
