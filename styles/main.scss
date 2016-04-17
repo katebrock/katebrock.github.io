@@ -47,18 +47,21 @@ section.hero {
   @include span-columns(12);
   height: 500px;
   background-repeat: no-repeat;
-  background: url(../assets/graph.jpg);
+  background-image: url(../assets/graph.jpg);
   background-size: 100%;
   background-position: 0 -32px;
   top: 0;
-  // position: fixed;
+  position: relative;
   margin: auto;
   z-index: 100000;
 }
-// h4{
-//   position: absolute;
-//   color: white;
-// }
+h4{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 100px;
+  color: white;
+}
 
 // .headerMain{
 //   @include outer-container(100%);
@@ -99,6 +102,7 @@ section.hero {
 ////////////////////////////////////
 .about {
   @include outer-container();
+  clear: left;
 }
 .aboutMe {
   @include span-columns(6);
@@ -117,14 +121,17 @@ section.hero {
   color: #FF6002;
 }
 .headshot {
-  @include span-columns(2 of 12);
-  @include shift(2);
+  @include span-columns(4 of 12);
   margin-top: 28px;
+  overflow: hidden;
   opacity: 1;
   -webkit-transition: opacity 0.2s ease-out;
   -moz-transition: opacity 0.2s ease-out;
   -o-transition: opacity 0.2s ease-out;
   transition: opacity 0.2s ease-out;
+  img{
+    width: 100%;
+  }
   &:hover {
     opacity: 0.4;
     cursor: pointer;
@@ -138,12 +145,12 @@ section.hero {
 .skillsSection {
   @include outer-container;
 }
+
 .skills li {
   @include span-columns(4);
   font-family: $body;
   line-height: 25px;
   text-align: center;
-  margin: 0 auto;
   &:hover {
     color: #FF6002;
     font-weight: bold;
@@ -158,6 +165,7 @@ section.hero {
 //////////////////////////////////
 .portfolioLinks {
   @include outer-container;
+  padding: 0;
 }
 .portfolio li {
   @include span-columns(4);
@@ -165,22 +173,28 @@ section.hero {
   position: relative;
   line-height: 25px;
   text-align: center;
-  margin: 0 auto;
+  margin-bottom: 20px;
   opacity: 1;
   a {
     background-color: #EDEDED;
     border: 1px solid rgba(103,105,94,0.32);
     position: relative;
     display: block;
+    height: 27vw;
+    max-height: 230px;
+    overflow: hidden;
     &:hover {
       cursor: pointer;
       -webkit-transition: background-color 2s ease-out;
       -moz-transition: background-color 2s ease-out;
       -o-transition: background-color 2s ease-out;
       transition: background-color 2s ease-out;
-      color: white;
       background-color: #FF7C2F;
       border: 2px solid gray;
+      h3{
+        color: white;
+        text-shadow: 2px 2px rgba(0, 0, 0, 1)
+      }
     }
   }
 }
@@ -190,7 +204,7 @@ h3 {
   left: 50%;
   transform: translate(-50%, -50%);
   color: black;
-  text-shadow: 2px 2px rgba(0,0,0,0.7);
+  text-shadow: 2px 2px rgba(255, 255, 255, 1);
   margin: 0;
   &:hover {
     cursor: pointer;
@@ -204,7 +218,13 @@ h3 {
 .portfolioGif {
   width: 100%;
   opacity: 0.1;
+  width: 140%;
+  margin: 0 -20;
   border: 1px solid rgba(103,105,94,0.32);
+  &.tshirts{
+    width: 200%;
+    margin: 0 -50%;
+  }
 }
 .portfolio li:nth-child(3n) {
   @include omega();
