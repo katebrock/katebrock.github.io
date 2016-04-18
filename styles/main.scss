@@ -17,8 +17,11 @@ h1 {
   @include span-columns(12 of 12);
   font-family: $heading;
   text-align: center;
+  font-size: 40px;
 }
-
+h1{
+  margin-top: 160px;
+}
 //////////////////////////////////////
 //            Header               //
 ////////////////////////////////////
@@ -31,6 +34,7 @@ h1 {
   background: transparent;
   position: fixed;
   width: 100%;
+  z-index: 999999;
   a{
     color: white;
     text-decoration: none;
@@ -105,7 +109,7 @@ h4{
   clear: left;
 }
 .aboutMe {
-  @include span-columns(6);
+  @include span-columns(7);
   font-family: $body;
   line-height: 34px;
   margin-left: 20px;
@@ -123,7 +127,6 @@ h4{
 .headshot {
   @include span-columns(4 of 12);
   margin-top: 28px;
-  overflow: hidden;
   opacity: 1;
   -webkit-transition: opacity 0.2s ease-out;
   -moz-transition: opacity 0.2s ease-out;
@@ -236,15 +239,19 @@ h3 {
 .social {
   @include outer-container;
 }
+.row{
+  @include row();
+}
 .links {
-  @include span-columns(10 of 12);
+  @include span-columns(9 of 12);
   @include shift(1.5);
   a {
     text-decoration: none;
     color: #000000;
   }
   .navLinks a {
-    @include span-columns(5);
+    @include span-columns(4);
+    @include omega(3n);
     list-style-type: none;
     background-color: #EDEDED;
     border: 1px solid rgba(103,105,94,0.32);
@@ -270,111 +277,6 @@ h3 {
     }
   }
 }
-
-//////////////////////////////////////
-/////////////////////////////////////
-//////////////old////////////////////
-////////////////////////////////////
-/////////////////////////////////////
-/////////////////////////////////////
-//          Header                //
-////////////////////////////////////
-// .hero{
-//   @include span-columns(12 of 12);
-//   background-color: rgba(159, 159, 159, 0.19);
-//   height: 100px;
-//   // position: fixed;
-//     span{
-//       @include shift(5 of 12);
-//       font-family: $heading;
-//       font-size: 24px;
-//       line-height: 86px;
-//     }
-// }
-///////////////////////////////////////
-//            Headshot              //
-//////////////////////////////////////
-// .headshot{
-//   @include span-columns(6);
-//   margin-top: 20px;
-//   img{
-//     @include span-columns(2 of 6);
-//     @include shift(2 of 6);
-//     max-width: 100%;
-//   }
-//   img:hover{
-//     opacity: 0.4;
-//     filter: alpha(opacity=40);
-//   }
-//
-//
-// }
-//
-//
-// //////////////////////////////////////
-// //             About               //
-// ////////////////////////////////////
-//
-// .aboutme{
-//   @include span-columns(5.5 of 12);
-//     font-family: $body;
-//     line-height: 25px;
-//     text-decoration: none;
-//       span{
-//         font-family: $body;
-//         text-decoration: none;
-//         a{
-//           text-decoration: none;
-//         }
-//           }
-//         }
-// h1{
-//   font-family: $heading;
-//   text-align: center;
-// }
-// .highlight{
-//   color: #FF6002;
-// }
-//
-//
-// ///////////////////////////////////
-// //            Links             //
-// /////////////////////////////////
-//
-// .links{
-//   @include span-columns(12 of 12);
-//   margin-top: 20px;
-//   a{
-//     text-decoration: none;
-//     color: #000000;
-// }
-//
-//
-// .nav{
-//   @include span-columns(5 of 12);
-//   list-style-type: none;
-//   background-color: #EDEDED;
-//   border: 1px solid rgba(103,105,94,0.32);
-//   height: 100px;
-//   margin-bottom: 20px;
-//   text-align: center;
-//   padding-top:40px;
-//   font-family: $body;
-//   cursor: pointer;
-//   -webkit-transition: background-color .7s ease-out;
-//   -moz-transition: background-color .7s ease-out;
-//   -o-transition: background-color .7s ease-out;
-//   transition: background-color .7s ease-out;
-//   &:hover{
-//     cursor: pointer;
-//     -webkit-transition: background-color 2s ease-out;
-//     -moz-transition: background-color 2s ease-out;
-//     -o-transition: background-color 2s ease-out;
-//     transition: background-color 2s ease-out;
-//     color: white;
-//     background-color: #FF7C2F;
-//     border: 2px solid gray;
-//     }
-// }
-//
-// }
+ul{
+  padding: 0;
+}
