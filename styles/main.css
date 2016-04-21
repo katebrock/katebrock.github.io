@@ -16,14 +16,13 @@ h1 {
   display: block;
   margin-right: 2.35765%;
   width: 100%;
-  font-family: "Cardo", serif;
+  font-family: "Parisienne-Regular";
   text-align: center;
-  font-size: 40px; }
+  font-size: 70px;
+  margin-top: 102px;
+  color: #FF6002; }
   h1:last-child {
     margin-right: 0; }
-
-h1 {
-  margin-top: 160px; }
 
 .headerMain {
   max-width: 100%;
@@ -41,6 +40,7 @@ h1 {
   width: 100%;
   height: 50px;
   background: transparent;
+  border-bottom: 1px solid #FF6002;
   position: fixed;
   width: 100%;
   z-index: 999999; }
@@ -52,7 +52,7 @@ h1 {
     float: right;
     padding-right: 40px;
     margin-top: 20px;
-    font-family: "Cardo", serif; }
+    font-family: "Josefin Sans", sans-serif; }
 
 .main {
   height: 200px; }
@@ -75,6 +75,8 @@ section.hero {
     margin-right: 0; }
 
 h4 {
+  font-family: "Parisienne-Regular";
+  font-size: 57px;
   position: absolute;
   width: 100%;
   text-align: center;
@@ -186,7 +188,12 @@ h4 {
     display: block;
     height: 27vw;
     max-height: 230px;
-    overflow: hidden; }
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-transition: background-color 0.7s ease-out;
+    -moz-transition: background-color 0.7s ease-out;
+    -o-transition: background-color 0.7s ease-out;
+    transition: background-color 0.7s ease-out; }
     .portfolio li a:hover {
       cursor: pointer;
       -webkit-transition: background-color 2s ease-out;
@@ -224,6 +231,9 @@ h3 {
   .portfolioGif.tshirts {
     width: 200%;
     margin: 0 -50%; }
+  .portfolioGif.calc {
+    width: 77%;
+    margin: -6px -122px; }
 
 .portfolio li:nth-child(3n) {
   margin-right: 0; }
@@ -231,7 +241,8 @@ h3 {
 .social {
   max-width: 68em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  margin-bottom: 50px; }
   .social::after {
     clear: both;
     content: "";
@@ -248,8 +259,8 @@ h3 {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 74.41059%;
-  margin-left: 12.79471%; }
+  width: 82.94039%;
+  margin-left: 8.5298%; }
   .links:last-child {
     margin-right: 0; }
   .links a {
@@ -291,3 +302,52 @@ h3 {
 
 ul {
   padding: 0; }
+
+footer {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  background-color: #FF6002;
+  color: white;
+  float: right;
+  height: 50px; }
+  footer:last-child {
+    margin-right: 0; }
+
+.footer {
+  float: right;
+  padding-top: 18px;
+  padding-right: 20px; }
+
+@media (max-width: 736px) {
+  body h4 {
+    font-size: 35px;
+    top: 37px; }
+  body section.hero {
+    height: 250px; }
+  body .aboutMe {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin-left: 17.05961%; }
+    body .aboutMe:last-child {
+      margin-right: 0; }
+    body .aboutMe .aboutPara {
+      margin-top: 20px; }
+  body .headshot {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin-left: 17.05961%;
+    margin-top: 38px; }
+    body .headshot:last-child {
+      margin-right: 0; }
+  h1 {
+    line-height: 64px;
+    margin-top: 20px;
+    margin-bottom: 10; } }

@@ -17,11 +17,11 @@ h1 {
   @include span-columns(12 of 12);
   font-family: $heading;
   text-align: center;
-  font-size: 40px;
+  font-size: 70px;
+  margin-top: 102px;
+  color: #FF6002;
 }
-h1{
-  margin-top: 160px;
-}
+
 //////////////////////////////////////
 //            Header               //
 ////////////////////////////////////
@@ -32,6 +32,7 @@ h1{
   @include span-columns(12);
   height: 50px;
   background: transparent;
+  border-bottom: 1px solid #FF6002;
   position: fixed;
   width: 100%;
   z-index: 999999;
@@ -41,7 +42,7 @@ h1{
     float: right;
     padding-right: 40px;
     margin-top: 20px;
-    font-family: $heading;
+    font-family: $body;
   }
 }
 .main {
@@ -60,6 +61,8 @@ section.hero {
   z-index: 100000;
 }
 h4{
+  font-family: $heading;
+  font-size: 57px;
   position: absolute;
   width: 100%;
   text-align: center;
@@ -67,40 +70,7 @@ h4{
   color: white;
 }
 
-// .headerMain{
-//   @include outer-container(100%);
-//
-// header{
-//   @include span-columns(12);
-//   height: 100px;
-// }
-// header a{
-//   color: black;
-// }
-//
-//
-//   .hero{
-//     @include span-columns(12);
-//     height: 400px;
-//     background: url(../assets/graph.jpg) no-repeat;
-//     background-size: 100%;
-//     background-position: 0px -32px;
-//     top:0px;
-//     margin:auto;
-//     z-index:100000;
-//
-//    span{
-//      @include span-columns(12 of 12);
-//      font-size: 30px;
-//      color: #ffffff;
-//      text-align: center;
-//      padding-top: 150px;
-//      font-family: $heading;
-//      font-weight: lighter;
-//     //  position: fixed;
-//    }
-//   }
-// }
+
 //////////////////////////////////////
 //             About               //
 ////////////////////////////////////
@@ -186,6 +156,11 @@ h4{
     height: 27vw;
     max-height: 230px;
     overflow: hidden;
+    cursor: pointer;
+    -webkit-transition: background-color 0.7s ease-out;
+    -moz-transition: background-color 0.7s ease-out;
+    -o-transition: background-color 0.7s ease-out;
+    transition: background-color 0.7s ease-out;
     &:hover {
       cursor: pointer;
       -webkit-transition: background-color 2s ease-out;
@@ -228,6 +203,10 @@ h3 {
     width: 200%;
     margin: 0 -50%;
   }
+  &.calc{
+    width: 77%;
+    margin: -6px -122px;
+  }
 }
 .portfolio li:nth-child(3n) {
   @include omega();
@@ -238,13 +217,14 @@ h3 {
 /////////////////////////////////
 .social {
   @include outer-container;
+  margin-bottom: 50px;
 }
 .row{
   @include row();
 }
 .links {
-  @include span-columns(9 of 12);
-  @include shift(1.5);
+  @include span-columns(10 of 12);
+  @include shift(1);
   a {
     text-decoration: none;
     color: #000000;
@@ -268,7 +248,7 @@ h3 {
     &:hover {
       cursor: pointer;
       -webkit-transition: background-color 2s ease-out;
-      -moz-transition: background-color 2s ease-out;
+        -moz-transition: background-color 2s ease-out;
       -o-transition: background-color 2s ease-out;
       transition: background-color 2s ease-out;
       color: white;
@@ -279,4 +259,61 @@ h3 {
 }
 ul{
   padding: 0;
+}
+
+////////////////////////////
+///        Footer        //
+//////////////////////////
+
+footer{
+  @include span-columns(12);
+  font-family: $body;
+  font-size: 18px;
+  background-color: #FF6002;
+  color: white;
+  float: right;
+  height: 50px;
+}
+.footer{
+  float: right;
+  padding-top: 18px;
+  padding-right: 20px;
+}
+
+
+
+
+
+/////////////////////////////
+////    Media Queries    ///
+///////////////////////////
+
+
+@media (max-width: 736px){
+body{
+  h4{
+    font-size: 35px;
+    top: 37px;
+  }
+section.hero{
+  height: 250px;
+}
+.aboutMe{
+  @include span-columns(8 of 12);
+  @include shift(2);
+  .aboutPara{
+    margin-top: 20px;
+  }
+}
+.headshot{
+  @include span-columns(8 of 12);
+  @include shift(2);
+  margin-top: 38px;
+}
+}
+h1{
+  line-height: 64px;
+  margin-top: 20px;
+  margin-bottom: 10;
+}
 }
