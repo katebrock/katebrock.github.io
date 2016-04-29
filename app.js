@@ -15,16 +15,6 @@
 });
 
 
-//////////////////////////
-////      flickity     //
-////////////////////////
-
-$('.main-carousel').flickity({
-  // options
-  cellAlign: 'left',
-  contain: true
-});
-
 
 
 // window.addEventListener("scroll", function(evt) {
