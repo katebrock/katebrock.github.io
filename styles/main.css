@@ -286,10 +286,6 @@ h3 {
     transition: background-color 0.7s ease-out; }
     .links .navLinks a:last-child {
       margin-right: 0; }
-    .links .navLinks a:nth-child(3n) {
-      margin-right: 0; }
-    .links .navLinks a:nth-child(3n+1) {
-      clear: left; }
     .links .navLinks a:hover {
       cursor: pointer;
       -webkit-transition: background-color 2s ease-out;
@@ -323,6 +319,8 @@ footer {
   padding-right: 20px; }
 
 @media (max-width: 736px) {
+  .portfolioPhone {
+    display: block; }
   body h4 {
     font-size: 35px;
     top: 37px; }
@@ -349,5 +347,13 @@ footer {
       margin-right: 0; }
   h1 {
     line-height: 64px;
-    margin-top: 20px;
-    margin-bottom: 10; } }
+    margin-top: 20px; }
+  .links {
+    margin-top: -40px; }
+  .skillsSection h1 {
+    margin-bottom: 35px; }
+  .portfolioSection h1 {
+    margin-bottom: 50px; } }
+
+.portfolioPhone {
+  display: none; }

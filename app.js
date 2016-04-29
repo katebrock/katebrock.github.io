@@ -1,4 +1,8 @@
-$(document).ready(function() {
+///////////////////////////
+///        NavBar       //
+/////////////////////////
+
+ $(document).ready(function() {
 
   $(window).scroll(function() {
     console.log('scrolly scroll');
@@ -11,6 +15,15 @@ $(document).ready(function() {
 });
 
 
+//////////////////////////
+////      flickity     //
+////////////////////////
+
+$('.main-carousel').flickity({
+  // options
+  cellAlign: 'left',
+  contain: true
+});
 
 
 

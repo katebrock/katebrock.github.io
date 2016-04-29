@@ -231,7 +231,7 @@ h3 {
   }
   .navLinks a {
     @include span-columns(4);
-    @include omega(3n);
+    // @include omega(3n);
     list-style-type: none;
     background-color: #EDEDED;
     border: 1px solid rgba(103,105,94,0.32);
@@ -290,11 +290,22 @@ footer{
 
 
 @media (max-width: 736px){
+  ////////////////////
+  /// hidden layout //
+  /// ////////////////
+
+  .portfolioPhone{
+    display: block;
+  }
+  .portfolioDesktop{
+    // display: none;
+  }
 body{
   h4{
     font-size: 35px;
     top: 37px;
   }
+
 section.hero{
   height: 250px;
 }
@@ -314,6 +325,35 @@ section.hero{
 h1{
   line-height: 64px;
   margin-top: 20px;
-  margin-bottom: 10;
+}
+.links{
+  margin-top: -40px;
+}
+.skillsSection h1{
+  margin-bottom: 35px;
+}
+.portfolioSection h1{
+  margin-bottom: 50px;
 }
 }
+
+////////////////////
+/// hidden layout //
+/// ////////////////
+
+.portfolioPhone{
+  display: none;
+}
+
+//////////////////////////
+////      flickity     //
+////////////////////////
+
+// .gallery {
+//   background: #EEE;
+// }
+//
+// .gallery img {
+//   display: block;
+//   height: 200px;
+// }

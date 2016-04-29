@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
   <link rel="stylesheet" href="styles/main.css" media="screen" charset="utf-8">
+  <!-- <link rel="stylesheet" href="/path/to/flickity.css" media="screen"> -->
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -47,7 +48,7 @@
         <section id="2" class="skillsSection">
           <h1>Skills</h1>
           <div class="skills">
-            <ul>
+            <ul class= skillsList>
               <div class="row">
                 <li>JavaScript</li>
                 <li>HTML</li>
@@ -71,7 +72,58 @@
             </ul>
           </div>
         </section>
-        <section id="3" class="portfolioSection">
+        <section id="3" class="portfolioSection portfolioDesktop">
+          <h1>Portfolio</h1>
+          <div class="portfolio">
+            <ul class="portfolioLinks">
+              <div class="row">
+                <li>
+                  <a href="https://github.com/katebrock/skateboard_website">
+                    <h3>Skateboard</h3>
+                    <img class="portfolioGif" src="assets/skateboard.gif" alt="" />
+                  </a>
+                </li>
+              <li>
+                <a href="https://github.com/katebrock/surf_and_paddle_website ">
+                  <h3>Surf & Paddle</h3>
+                  <img class="portfolioGif" src="assets/surfandpaddle.gif" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/katebrock/shirts_website ">
+                  <h3>T-shirts</h3>
+                  <img class="portfolioGif tshirts" src="assets/tshirts.gif" alt=""  />
+                </a>
+              </li>
+            </div>
+            <div class="row">
+              <li>
+                <a href="https://github.com/katebrock/Outfit_Maker.git">
+                  <h3>Drobe</h3>
+                  <img class="portfolioGif tshirts" src="assets/drobe.gif" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/katebrock/jquery_calculator">
+                  <h3>Calculator</h3>
+                  <img class="portfolioGif calc" src="assets/calculatorgif.gif" alt="" />
+                </a>
+              </li>
+              <li><a href="# ">Bring the Band</a></li>
+              <!-- <li><a href="# ">Check Github</a></li> -->
+            </div>
+            </ul>
+          </div>
+        </section>
+        <!-- <section class="slider">
+          <div class="carousel js-flickity"
+            data-flickity-options='{ "imagesLoaded": true, "percentPosition": false "wrapAround": true }'>
+            <img src="assets/browns.png" alt="orange tree" />
+            <img src="TVOS.png" alt="submerged" />
+            <img src="look-out.jpg" alt="look-out" />
+          </div>
+        </section> -->
+        <section id="3" class="portfolioSection portfolioPhone">
           <h1>Portfolio</h1>
           <div class="portfolio">
             <ul class="portfolioLinks">
@@ -93,12 +145,6 @@
                   <img class="portfolioGif tshirts" src="assets/tshirts.gif" alt=""  />
                 </a>
               </li>
-              <!-- <li>
-                <a href="https://github.com/katebrock/backbone_simpsons_twitter">
-                  <h3>Twitter</h3>
-                  <img class="portfolioGif" src="" alt="" />
-                </a>
-              </li> -->
               <li>
                 <a href="https://github.com/katebrock/Outfit_Maker.git">
                   <h3>Drobe</h3>
@@ -116,6 +162,14 @@
             </ul>
           </div>
         </section>
+        <!-- <section class="slider">
+          <div class="carousel js-flickity"
+            data-flickity-options='{ "imagesLoaded": true, "percentPosition": false "wrapAround": true }'>
+            <img src="assets/browns.png" alt="orange tree" />
+            <img src="TVOS.png" alt="submerged" />
+            <img src="look-out.jpg" alt="look-out" />
+          </div>
+        </section> -->
         <section id="4" class="social">
           <h1>Links</h1>
           <div class="links">
@@ -154,5 +208,6 @@
     </footer>
   </main>
   <script src="app.js"></script>
+  <script src="/path/to/flickity.pkgd.min.js"></script>
 </body>
 </html>
