@@ -136,8 +136,10 @@ h4{
 ////////////////////////////////////
 //             Portfolio         //
 //////////////////////////////////
-.portfolioLinks {
+.portfolio {
   @include outer-container;
+  @include span-columns(10 of 12);
+  @include shift(1);
   padding: 0;
 }
 .portfolio li {
@@ -216,7 +218,6 @@ h3 {
 //            Links             //
 /////////////////////////////////
 .social {
-  @include outer-container;
   margin-bottom: 50px;
 }
 .row{
@@ -280,6 +281,16 @@ footer{
   padding-right: 20px;
 }
 
+////////////////////
+/// hidden layout //
+/// ////////////////
+
+.portfolioPhone, .socialPhone{
+  display: none;
+}
+.portfolioDesktop, .socialDesktop{
+  display: block;
+}
 
 
 
@@ -290,16 +301,6 @@ footer{
 
 
 @media (max-width: 736px){
-  ////////////////////
-  /// hidden layout //
-  /// ////////////////
-
-  .portfolioPhone{
-    display: block;
-  }
-  .portfolioDesktop{
-    // display: none;
-  }
 body{
   h4{
     font-size: 35px;
@@ -335,15 +336,22 @@ h1{
 .portfolioSection h1{
   margin-bottom: 50px;
 }
+.portfolioPhone .portfolio li:nth-child(2n), .socialPhone .links .navLinks a:nth-child(2n){
+  margin-right: 0;
 }
-
-////////////////////
-/// hidden layout //
-/// ////////////////
-
-.portfolioPhone{
+.portfolioPhone .portfolio li, .socialPhone .links .navLinks a{
+  margin-right: 4%;
+  width: 48%;
+}
+.portfolioPhone, .socialPhone{
+  display: block;
+}
+.portfolioDesktop, .socialDesktop{
   display: none;
 }
+}
+
+
 
 //////////////////////////
 ////      flickity     //

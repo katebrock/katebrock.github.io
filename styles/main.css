@@ -16,7 +16,7 @@ h1 {
   display: block;
   margin-right: 2.35765%;
   width: 100%;
-  font-family: "Parisienne-Regular";
+  font-family: "Parisienne";
   text-align: center;
   font-size: 70px;
   margin-top: 102px;
@@ -75,7 +75,7 @@ section.hero {
     margin-right: 0; }
 
 h4 {
-  font-family: "Parisienne-Regular";
+  font-family: "Parisienne";
   font-size: 57px;
   position: absolute;
   width: 100%;
@@ -158,15 +158,22 @@ h4 {
 .skills li:nth-child(3n) {
   margin-right: 0; }
 
-.portfolioLinks {
+.portfolio {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  margin-left: 8.5298%;
   padding: 0; }
-  .portfolioLinks::after {
+  .portfolio::after {
     clear: both;
     content: "";
     display: table; }
+  .portfolio:last-child {
+    margin-right: 0; }
 
 .portfolio li {
   float: left;
@@ -239,14 +246,7 @@ h3 {
   margin-right: 0; }
 
 .social {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 50px; }
-  .social::after {
-    clear: both;
-    content: "";
-    display: table; }
 
 .row {
   display: block; }
@@ -318,9 +318,13 @@ footer {
   padding-top: 18px;
   padding-right: 20px; }
 
+.portfolioPhone, .socialPhone {
+  display: none; }
+
+.portfolioDesktop, .socialDesktop {
+  display: block; }
+
 @media (max-width: 736px) {
-  .portfolioPhone {
-    display: block; }
   body h4 {
     font-size: 35px;
     top: 37px; }
@@ -353,7 +357,13 @@ footer {
   .skillsSection h1 {
     margin-bottom: 35px; }
   .portfolioSection h1 {
-    margin-bottom: 50px; } }
-
-.portfolioPhone {
-  display: none; }
+    margin-bottom: 50px; }
+  .portfolioPhone .portfolio li:nth-child(2n), .socialPhone .links .navLinks a:nth-child(2n) {
+    margin-right: 0; }
+  .portfolioPhone .portfolio li, .socialPhone .links .navLinks a {
+    margin-right: 4%;
+    width: 48%; }
+  .portfolioPhone, .socialPhone {
+    display: block; }
+  .portfolioDesktop, .socialDesktop {
+    display: none; } }
