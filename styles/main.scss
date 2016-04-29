@@ -136,13 +136,12 @@ h4{
 ////////////////////////////////////
 //             Portfolio         //
 //////////////////////////////////
-.portfolio {
-  @include outer-container;
+.portfolio, .prototypeSection {
   @include span-columns(10 of 12);
   @include shift(1);
   padding: 0;
 }
-.portfolio li {
+.portfolio li, .prototypeSection a {
   @include span-columns(4);
   font-family: $body;
   position: relative;
@@ -215,6 +214,32 @@ h3 {
 }
 
 ///////////////////////////////////
+/////      Prototype:           //
+/////////////////////////////////
+
+.prototypeSection{
+  margin-right: 0;
+  img{
+    width: 100%;
+  }
+}
+.lightbox img{
+  width: 100%;
+  transition: opacity 1000ms ease;
+  &:hover{
+    opacity: 0;
+  }
+
+}
+.menu{
+  background: url(../assets/TVOS.png) center center transparent no-repeat;
+  background-size: cover;
+}
+.anotherPrototype{
+  background: url(../assets/TVOS.png) center center transparent no-repeat;
+  background-size: cover;
+}
+///////////////////////////////////
 //            Links             //
 /////////////////////////////////
 .social {
@@ -285,10 +310,10 @@ footer{
 /// hidden layout //
 /// ////////////////
 
-.portfolioPhone, .socialPhone{
+.portfolioPhone, .prototypePhone, .socialPhone{
   display: none;
 }
-.portfolioDesktop, .socialDesktop{
+.portfolioDesktop, .prototypeDesktop, .socialDesktop{
   display: block;
 }
 
@@ -298,6 +323,7 @@ footer{
 /////////////////////////////
 ////    Media Queries    ///
 ///////////////////////////
+
 
 
 @media (max-width: 736px){
@@ -336,32 +362,17 @@ h1{
 .portfolioSection h1{
   margin-bottom: 50px;
 }
-.portfolioPhone .portfolio li:nth-child(2n), .socialPhone .links .navLinks a:nth-child(2n){
+.portfolioPhone .portfolio li:nth-child(2n), .socialPhone .links .navLinks a:nth-child(2n), .prototypePhone a:nth-child(2n){
   margin-right: 0;
 }
-.portfolioPhone .portfolio li, .socialPhone .links .navLinks a{
+.portfolioPhone .portfolio li, .socialPhone .links .navLinks a, .prototypePhone a{
   margin-right: 4%;
   width: 48%;
 }
-.portfolioPhone, .socialPhone{
+.portfolioPhone, .prototypePhone, .socialPhone{
   display: block;
 }
-.portfolioDesktop, .socialDesktop{
+.portfolioDesktop, .prototypeDesktop, .socialDesktop{
   display: none;
 }
 }
-
-
-
-//////////////////////////
-////      flickity     //
-////////////////////////
-
-// .gallery {
-//   background: #EEE;
-// }
-//
-// .gallery img {
-//   display: block;
-//   height: 200px;
-// }

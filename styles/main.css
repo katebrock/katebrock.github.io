@@ -158,24 +158,17 @@ h4 {
 .skills li:nth-child(3n) {
   margin-right: 0; }
 
-.portfolio {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto;
+.portfolio, .prototypeSection {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 82.94039%;
   margin-left: 8.5298%;
   padding: 0; }
-  .portfolio::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .portfolio:last-child {
+  .portfolio:last-child, .prototypeSection:last-child {
     margin-right: 0; }
 
-.portfolio li {
+.portfolio li, .prototypeSection a {
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -186,9 +179,9 @@ h4 {
   text-align: center;
   margin-bottom: 20px;
   opacity: 1; }
-  .portfolio li:last-child {
+  .portfolio li:last-child, .prototypeSection a:last-child {
     margin-right: 0; }
-  .portfolio li a {
+  .portfolio li a, .prototypeSection a a {
     background-color: #EDEDED;
     border: 1px solid rgba(103, 105, 94, 0.32);
     position: relative;
@@ -201,7 +194,7 @@ h4 {
     -moz-transition: background-color 0.7s ease-out;
     -o-transition: background-color 0.7s ease-out;
     transition: background-color 0.7s ease-out; }
-    .portfolio li a:hover {
+    .portfolio li a:hover, .prototypeSection a a:hover {
       cursor: pointer;
       -webkit-transition: background-color 2s ease-out;
       -moz-transition: background-color 2s ease-out;
@@ -209,7 +202,7 @@ h4 {
       transition: background-color 2s ease-out;
       background-color: #FF7C2F;
       border: 2px solid gray; }
-      .portfolio li a:hover h3 {
+      .portfolio li a:hover h3, .prototypeSection a a:hover h3 {
         color: white;
         text-shadow: 2px 2px black; }
 
@@ -244,6 +237,25 @@ h3 {
 
 .portfolio li:nth-child(3n) {
   margin-right: 0; }
+
+.prototypeSection {
+  margin-right: 0; }
+  .prototypeSection img {
+    width: 100%; }
+
+.lightbox img {
+  width: 100%;
+  transition: opacity 1000ms ease; }
+  .lightbox img:hover {
+    opacity: 0; }
+
+.menu {
+  background: url(../assets/TVOS.png) center center transparent no-repeat;
+  background-size: cover; }
+
+.anotherPrototype {
+  background: url(../assets/TVOS.png) center center transparent no-repeat;
+  background-size: cover; }
 
 .social {
   margin-bottom: 50px; }
@@ -318,10 +330,10 @@ footer {
   padding-top: 18px;
   padding-right: 20px; }
 
-.portfolioPhone, .socialPhone {
+.portfolioPhone, .prototypePhone, .socialPhone {
   display: none; }
 
-.portfolioDesktop, .socialDesktop {
+.portfolioDesktop, .prototypeDesktop, .socialDesktop {
   display: block; }
 
 @media (max-width: 736px) {
@@ -358,12 +370,12 @@ footer {
     margin-bottom: 35px; }
   .portfolioSection h1 {
     margin-bottom: 50px; }
-  .portfolioPhone .portfolio li:nth-child(2n), .socialPhone .links .navLinks a:nth-child(2n) {
+  .portfolioPhone .portfolio li:nth-child(2n), .socialPhone .links .navLinks a:nth-child(2n), .prototypePhone a:nth-child(2n) {
     margin-right: 0; }
-  .portfolioPhone .portfolio li, .socialPhone .links .navLinks a {
+  .portfolioPhone .portfolio li, .socialPhone .links .navLinks a, .prototypePhone a {
     margin-right: 4%;
     width: 48%; }
-  .portfolioPhone, .socialPhone {
+  .portfolioPhone, .prototypePhone, .socialPhone {
     display: block; }
-  .portfolioDesktop, .socialDesktop {
+  .portfolioDesktop, .prototypeDesktop, .socialDesktop {
     display: none; } }
