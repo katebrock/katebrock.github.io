@@ -3,13 +3,17 @@
 /////////////////////////
 
  $(document).ready(function() {
+  var hero = $('.hero');
+  var socialLinks = $('.socialLinks');
 
   $(window).scroll(function() {
-    console.log('scrolly scroll');
-    if($(window).scrollTop() >= 450) {
-      $('.socialLinks').css('background', 'pink');
+    var top = hero.scrollTop() + hero.height() - parseInt(hero.css('margin-bottom')) - socialLinks.height();
+
+    // console.log('scrolly scroll');
+    if($(window).scrollTop() >= top) {
+      socialLinks.css('background', '#FF6002');
     } else {
-      $('.socialLinks').css('background', 'transparent');
+      socialLinks.css('background', 'transparent');
     }
   });
 });

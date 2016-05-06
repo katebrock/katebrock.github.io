@@ -6,19 +6,20 @@ html,
 body,
 div.headerMain {
   height: 100%;
-  overflow: scroll;
+  // overflow: scroll;
   margin: 0;
 }
 
 //////////////////////////////////////
 //          Global                 //
 ////////////////////////////////////
-h1 {
+h5 {
   @include span-columns(12 of 12);
   font-family: $heading;
   text-align: center;
   font-size: 70px;
-  margin-top: 102px;
+  margin-top: 23px;
+  margin-bottom: 25px;
   color: #FF6002;
 }
 
@@ -32,10 +33,11 @@ h1 {
   @include span-columns(12);
   height: 50px;
   background: transparent;
-  border-bottom: 1px solid #FF6002;
   position: fixed;
   width: 100%;
   z-index: 999999;
+  transition: background 0.4s;
+
   a{
     color: white;
     text-decoration: none;
@@ -58,7 +60,8 @@ section.hero {
   top: 0;
   position: relative;
   margin: auto;
-  z-index: 100000;
+  margin-bottom: 25px;
+  z-index: 1;
 }
 h4{
   font-family: $heading;
@@ -81,7 +84,8 @@ h4{
 .aboutMe {
   @include span-columns(7);
   font-family: $body;
-  line-height: 34px;
+  font-size: 26px;
+  line-height: 36px;
   margin-left: 20px;
   span {
     font-family: $body;
@@ -93,6 +97,11 @@ h4{
 }
 .highlight {
   color: #FF6002;
+
+}
+.aboutPara{
+  margin-top: 120px;
+  padding: 0 20px 0 20px;
 }
 .headshot {
   @include span-columns(4 of 12);
@@ -337,29 +346,32 @@ section.hero{
   height: 250px;
 }
 .aboutMe{
-  @include span-columns(8 of 12);
-  @include shift(2);
+  @include span-columns(11 of 12);
+  // @include shift(2);
+  // margin: auto;
+  text-align: center;
+
   .aboutPara{
     margin-top: 20px;
   }
 }
 .headshot{
-  @include span-columns(8 of 12);
-  @include shift(2);
+  @include span-columns(10 of 12);
+  @include shift(1);
   margin-top: 38px;
 }
 }
-h1{
+h5{
   line-height: 64px;
   margin-top: 20px;
 }
 .links{
   margin-top: -40px;
 }
-.skillsSection h1{
+.skillsSection h5{
   margin-bottom: 35px;
 }
-.portfolioSection h1{
+.portfolioSection h5{
   margin-bottom: 50px;
 }
 .portfolioPhone .portfolio li:nth-child(2n), .socialPhone .links .navLinks a:nth-child(2n), .prototypePhone a:nth-child(2n){
@@ -375,4 +387,9 @@ h1{
 .portfolioDesktop, .prototypeDesktop, .socialDesktop{
   display: none;
 }
+}
+.socialLinks{
+  a{
+    padding-right: 30px;
+  }
 }
