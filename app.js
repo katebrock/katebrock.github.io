@@ -7,7 +7,7 @@
   var socialLinks = $('.socialLinks');
 
   $(window).scroll(function() {
-    var top = hero.scrollTop() + hero.height() - parseInt(hero.css('margin-bottom')) - socialLinks.height();
+    var top = hero.scrollTop() + hero.height() - socialLinks.height();
 
     // console.log('scrolly scroll');
     if($(window).scrollTop() >= top) {
