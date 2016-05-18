@@ -8,39 +8,52 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
   <link rel="stylesheet" href="styles/main.css" media="screen" charset="utf-8">
   <link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
-  <!-- <link rel="stylesheet" href="/path/to/flickity.css" media="screen"> -->
   <script src="js/jquery.fancybox.js" type="text/javascript"></script>
+  <script src="js/smoothscroll.js"></script>
   <link rel="stylesheet" type="text/css" href="styles/jquery.fancybox.css" media="screen" />
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-  <header class="socialLinks">
-    <a href="#5">Links</a>
-    <a href="#4">Prototypes</a>
-    <a href="#3">Portfolio</a>
-    <a href="#2">Skills</a>
-    <a href="#1">About</a>
+  <header class="socialLinks socialLinksDesktop">
+    <a href="#links-section" id="links-link">Links</a>
+    <a href="#prototypes-section" id="prototypes-link">Prototypes</a>
+    <a href="#portfolio-section" id="portfolio-link">Portfolio</a>
+    <a href="#skills-section" id="skills-link">Skills</a>
+    <a href="#about-section" id="about-link">About</a>
   </header>
+
+  <header class="socialLinks socialLinksPhone">
+    <a href="#links-section" id="links-link">Links</a>
+    <a href="#prototypes-section-phone" id="prototypes-link-phone">Prototypes</a>
+    <a href="#portfolio-section-phone" id="portfolio-link-phone">Portfolio</a>
+    <a href="#skills-section" id="skills-link">Skills</a>
+    <a href="#about-section" id="about-link">About</a>
+  </header>
+
+
   <main>
     <div class="headerMain">
       <section class="main">
         <section class="hero">
-          <h4><<span> hello world </span>></h4>
+          <h4>
+            <span> hello world </span>></h4>
         </section>
-        <section id="1" class="about">
+        <section id="about-section" class="about">
           <div class="aboutMe">
             <h5>About Me</h5>
             <p class="aboutPara">My name is
               <span class="highlight"><b>Kate Brock</b></span> and I am a front end web developer from
-              <span class="highlight"><b> Nashville, TN.</b></span> Lover of <span class="highlight"><b>UI/UX</b></span> and maker of all things pretty. I graduated from The School of the Art Institute of Chicago and in my spare time
-               I am a <span class="highlight"><b>printmaker</b></span> and <span class="highlight"><b> photographer.</b></span> I am an avid fan of good design and love fixing projects to look more fluent and approachable.
-               I enjoy canoeing, going to shows, and collecting vintage t-shirts. I also have a pretty neat sock collection.
+              <span class="highlight"><b> Nashville, TN.</b></span> Lover of
+              <span class="highlight"><b>UI/UX</b></span> and maker of all things pretty. I graduated from The School of the Art Institute of Chicago and in my spare time I am a
+              <span class="highlight"><b>printmaker</b></span> and
+              <span class="highlight"><b> photographer.</b></span> I am an avid fan of good design and love fixing projects to look more fluent and approachable. I enjoy canoeing, going to shows, and collecting vintage t-shirts. I also have a pretty neat sock collection.
             </p>
             <span class="aboutPara">Check out my
-              <a href="assets/resume.pdf" download="assets/resume.pdf">
+              <a href="assets/resume.pdf" target="_blank">
                 <span class="highlight"><b>resume</b></span>
-              </a>.</span><br>
+              </a>.</span>
+            <br>
             <span class="aboutPara">Let's
               <a href="mailto:katherine.marshall.brock@gmail.com">
                 <span class="highlight"><b>chat</b></span>
@@ -50,10 +63,10 @@
             <img src="assets/headshot.jpg" alt="layout" />
           </div>
         </section>
-        <section id="2" class="skillsSection">
+        <section id="skills-section" class="skillsSection">
           <h5>Skills</h5>
           <div class="skills">
-            <ul class= skillsList>
+            <ul class="skillsList">
               <div class="row">
                 <li>JavaScript</li>
                 <li>HTML</li>
@@ -77,7 +90,7 @@
             </ul>
           </div>
         </section>
-        <section id="3" class="portfolioSection portfolioDesktop">
+        <section id="portfolio-section" class="portfolioSection portfolioDesktop">
           <h5>Portfolio</h5>
           <div class="portfolio">
             <ul class="portfolioLinks">
@@ -88,45 +101,45 @@
                     <img class="portfolioGif" src="assets/skateboard.gif" alt="" />
                   </a>
                 </li>
-              <li>
-                <a href="https://github.com/katebrock/surf_and_paddle_website ">
-                  <h3>Surf & Paddle</h3>
-                  <img class="portfolioGif" src="assets/surfandpaddle.gif" alt="" />
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/katebrock/shirts_website ">
-                  <h3>T-shirts</h3>
-                  <img class="portfolioGif tshirts" src="assets/tshirts.gif" alt=""  />
-                </a>
-              </li>
-            </div>
-            <div class="row">
-              <li>
-                <a href="https://github.com/katebrock/Outfit_Maker.git">
-                  <h3>Drobe</h3>
-                  <img class="portfolioGif tshirts" src="assets/drobe.gif" alt="" />
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/katebrock/jquery_calculator">
-                  <h3>Calculator</h3>
-                  <img class="portfolioGif calc" src="assets/calculatorgif.gif" alt="" />
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/katebrock/github_repo_mockup">
-                  <h3>Github Clone</h3>
-                  <img class="portfolioGif" src="assets/githubrepo.gif" alt="" />
-                </a>
-              </li>
-              <!-- <li><a href="# ">Bring the Band</a></li> -->
-              <!-- <li><a href="# ">Check Github</a></li> -->
-            </div>
+                <li>
+                  <a href="https://github.com/katebrock/surf_and_paddle_website ">
+                    <h3>Surf & Paddle</h3>
+                    <img class="portfolioGif" src="assets/surfandpaddle.gif" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/katebrock/shirts_website ">
+                    <h3>T-shirts</h3>
+                    <img class="portfolioGif tshirts" src="assets/tshirts.gif" alt="" />
+                  </a>
+                </li>
+              </div>
+              <div class="row">
+                <li>
+                  <a href="https://github.com/katebrock/Outfit_Maker.git">
+                    <h3>Drobe</h3>
+                    <img class="portfolioGif tshirts" src="assets/drobe.gif" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/katebrock/jquery_calculator">
+                    <h3>Calculator</h3>
+                    <img class="portfolioGif calc" src="assets/calculatorgif.gif" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/katebrock/github_repo_mockup">
+                    <h3>Github Clone</h3>
+                    <img class="portfolioGif" src="assets/githubrepo.gif" alt="" />
+                  </a>
+                </li>
+                <!-- <li><a href="# ">Bring the Band</a></li> -->
+                <!-- <li><a href="# ">Check Github</a></li> -->
+              </div>
             </ul>
           </div>
         </section>
-        <section id="3" class="portfolioSection portfolioPhone">
+        <section id="portfolio-section-phone" class="portfolioSection portfolioPhone">
           <h5>Portfolio</h5>
           <div class="portfolio">
             <ul class="portfolioLinks">
@@ -145,7 +158,7 @@
               <li>
                 <a href="https://github.com/katebrock/shirts_website ">
                   <h3>T-shirts</h3>
-                  <img class="portfolioGif tshirts" src="assets/tshirts.gif" alt=""  />
+                  <img class="portfolioGif tshirts" src="assets/tshirts.gif" alt="" />
                 </a>
               </li>
               <li>
@@ -171,21 +184,28 @@
             </ul>
           </div>
         </section>
-        <section id="4" class="prototypeSection prototypeDesktop">
+        <section id="prototypes-section" class="prototypeSection prototypeDesktop">
           <h5>Prototypes</h5>
           <div class="row">
-          <a class="fancybox fancybox.ajax" href="lightbox/menu.html" title="Hover to see prototype"><img src="assets/browns.png" alt="" /></a>
-          <a class="fancybox fancybox.ajax" href="lightbox/anotherPrototype.html" title="Hover to see prototype"><img src="assets/TVOS.png" alt="" /></a>
-          <a class="fancybox fancybox.ajax" href="lightbox/anotherPrototype2.html" title="Hover to see prototype"><img src="assets/gatesnfences.png" alt="" /></a>
-        </div>
+            <a class="fancybox fancybox.ajax" href="lightbox/menu.html" title="Hover to see prototype">
+              <img src="assets/browns.png" alt="" />
+            </a>
+            <a class="fancybox fancybox.ajax" href="lightbox/anotherPrototype.html" title="Hover to see prototype">
+              <img src="assets/TVOS.png" alt="" />
+            </a>
+            <a class="fancybox fancybox.ajax" href="lightbox/anotherPrototype2.html" title="Hover to see prototype">
+              <img src="assets/gatesnfences.png" alt="" />
+            </a>
+          </div>
+          <!-- </section> HACK CITY -->
         </section>
-        <section id="4" class="prototypeSection prototypePhone">
+        <section id="prototypes-section-phone" class="prototypeSection prototypePhone">
           <h5>Prototypes</h5>
             <a class="fancybox fancybox.ajax" href="lightbox/menu.html" title="Hover to see prototype"><img src="assets/browns.png" alt="" /></a>
             <a class="fancybox fancybox.ajax" href="lightbox/anotherPrototype.html" title="Hover to see prototype"><img src="assets/TVOS.png" alt="" /></a>
             <a class="fancybox fancybox.ajax" href="lightbox/anotherPrototype2.html" title="Hover to see prototype"><img src="assets/gatesnfences.png" alt="" /></a>
         </section>
-        <section id="5" class="social socialDesktop">
+        <section id="links-section" class="social">
           <h5>Links</h5>
           <div class="links">
             <ul class="navLinks">
@@ -216,48 +236,22 @@
             </ul>
           </div>
         </section>
-      <section id="4" class="social socialPhone">
-        <h5>Links</h5>
-        <div class="links">
-          <ul class="navLinks">
-              <a href="https://twitter.com/katebrock ">
-                <li><i class="fa fa-twitter "></i></li>
-              </a>
-              <a href="https://www.linkedin.com/in/katebrock ">
-                <li><i class="fa fa-linkedin "></i></li>
-              </a>
-              <a href="https://github.com/katebrock ">
-                <li><i class="fa fa-github-alt "></i></li>
-              </a>
-              <a href="https://medium.com/@katebrock ">
-                <li><i class="fa fa-medium "></i></li>
-              </a>
-              <a href="mailto:katherine.marshall.brock@gmail.com ">
-                <li><i class="fa fa-envelope-o "></i></li>
-              </a>
-              <a href="tel:6154912499">
-                <li>
-                  <span><i class="fa fa-phone "></i></span>
-                </li>
-              </a>
-          </ul>
-        </div>
       </section>
-    </section>
     </div>
     <footer>
       <span class="footer"> © 2016 Kate Brock</span>
     </footer>
   </main>
   <script src="app.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-			 *  Simple image gallery. Uses default settings
-			 */
+  <script type="text/javascript">
+    $(document).ready(function() {
+      /*
+       *  Simple image gallery. Uses default settings
+       */
 
-			$('.fancybox').fancybox();
-});
-</script>
+      $('.fancybox').fancybox();
+    });
+  </script>
 </body>
+
 </html>
