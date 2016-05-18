@@ -5,7 +5,7 @@ $visual-grid: true;
 html,
 body,
 div.headerMain {
-  height: 100%;
+  // height: 100%;
   // overflow: scroll;
   margin: 0;
 }
@@ -48,7 +48,7 @@ h5 {
   }
 }
 .main {
-  height: 200px;
+  //height: 200px;
 }
 section.hero {
   @include span-columns(12);
@@ -240,13 +240,26 @@ h3 {
   }
 
 }
+
+.socialLinksPhone {
+  display: none;
+}
+
+.social {
+  clear: both;
+}
+
 .menu{
-  background: url(../assets/TVOS.png) center center transparent no-repeat;
-  background-size: cover;
+  background: url(../assets/browns.png) center center transparent no-repeat;
+  background-size: contain;
 }
 .anotherPrototype{
   background: url(../assets/TVOS.png) center center transparent no-repeat;
-  background-size: cover;
+  background-size: contain;
+}
+.anotherPrototype2{
+  background: url(../assets/gatesnfences.png) center center transparent no-repeat;
+  background-size: contain;
 }
 ///////////////////////////////////
 //            Links             //
@@ -341,6 +354,15 @@ body{
     font-size: 35px;
     top: 37px;
   }
+
+  .socialLinksPhone {
+    display: block;
+  }
+
+  .socialLinksDesktop {
+    display: none;
+  }
+
 
 section.hero{
   height: 250px;

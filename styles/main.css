@@ -7,7 +7,6 @@ html {
 html,
 body,
 div.headerMain {
-  height: 100%;
   margin: 0; }
 
 h5 {
@@ -53,9 +52,6 @@ h5 {
     padding-right: 40px;
     margin-top: 20px;
     font-family: "Josefin Sans", sans-serif; }
-
-.main {
-  height: 200px; }
 
 section.hero {
   float: left;
@@ -255,13 +251,23 @@ h3 {
   .lightbox img:hover {
     opacity: 0; }
 
+.socialLinksPhone {
+  display: none; }
+
+.social {
+  clear: both; }
+
 .menu {
-  background: url(../assets/TVOS.png) center center transparent no-repeat;
-  background-size: cover; }
+  background: url(../assets/browns.png) center center transparent no-repeat;
+  background-size: contain; }
 
 .anotherPrototype {
   background: url(../assets/TVOS.png) center center transparent no-repeat;
-  background-size: cover; }
+  background-size: contain; }
+
+.anotherPrototype2 {
+  background: url(../assets/gatesnfences.png) center center transparent no-repeat;
+  background-size: contain; }
 
 .social {
   margin-bottom: 50px; }
@@ -346,6 +352,10 @@ footer {
   body h4 {
     font-size: 35px;
     top: 37px; }
+  body .socialLinksPhone {
+    display: block; }
+  body .socialLinksDesktop {
+    display: none; }
   body section.hero {
     height: 250px; }
   body .aboutMe {
